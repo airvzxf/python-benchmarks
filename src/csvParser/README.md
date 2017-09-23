@@ -64,7 +64,8 @@ functionName()
 
 ## My results
 
-Sat Sep 23 01:41:46 EDT 2017<br>
+Sat Sep 23 01:41:46 EDT 2017
+
 ---
 Winner: csvParser with `import csv`<br>
 CPU: Both useed the same resources.<br>
