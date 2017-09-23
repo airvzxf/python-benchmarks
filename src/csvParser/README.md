@@ -67,6 +67,6 @@ functionName()
 ### Sat Sep 23 01:41:46 EDT 2017
 __Winner:__ __csvParser__ with `import csv`<br>
 Time: csvParser was faster but not to much.<br>
-Memory: Both used the same.
+Memory: Both used the same.<br>
 CPU: Both useed the same resources.<br>
 GPU: Not used
