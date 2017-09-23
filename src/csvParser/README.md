@@ -63,7 +63,7 @@ functionName()
 ```
 
 ## Usages
-You're able to modified the test:
+You're able to modified or run the test:<br>
 `$ python splitParse.py`<br>
 `$ python csvParse.py`<br>
 
