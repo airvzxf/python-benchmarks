@@ -1,6 +1,14 @@
 # CSV Parse Benchmarks
 These are benchmarks test for CSV parser
 
+## Usages
+You're able to modified or run the test:<br>
+`$ python splitParse.py`<br>
+`$ python csvParse.py`<br>
+
+Also you're able to un-comment or comment the imports and decorators
+to run and compare the results.<br>
+
 ## 1.1 Install packages in Arch Linux
 sudo pacman -S python-pip<br>
 sudo pacman -S python-psutil<br>
@@ -61,14 +69,6 @@ def functionName():
 
 functionName()
 ```
-
-## Usages
-You're able to modified or run the test:<br>
-`$ python splitParse.py`<br>
-`$ python csvParse.py`<br>
-
-Also you're able to un-comment or comment the imports and decorators
-to run and compare the results.<br>
 
 ## My results
 
