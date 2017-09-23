@@ -19,6 +19,7 @@ one of the these commands line.<br>
 ## 2.b Import in your code
 
 ### For total time:
+`python file.py`<br>
 ```python
 from profilehooks import timecall
 @timecall
@@ -29,6 +30,7 @@ functionName()
 ```
 
 ### For time:
+`python file.py`<br>
 ```python
 from profilehooks import profile
 @profile
@@ -39,6 +41,7 @@ functionName()
 ```
 
 ### For memory:
+`python file.py`<br>
 ```python
 from memory_profiler import profile
 @profile
