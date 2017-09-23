@@ -9,24 +9,26 @@ You're able to modified or run the test:<br>
 Also you're able to un-comment or comment the imports and decorators
 to run and compare the results.<br>
 
-## 1.1 Install packages in Arch Linux
+## Installation and setup
+
+### 1.1 Install packages in Arch Linux
 sudo pacman -S python-pip<br>
 sudo pacman -S python-psutil<br>
 
-## 1.2 Install the python packages with pip
+### 1.2 Install the python packages with pip
 sudo pip install profilehooks<br>
 sudo pip install memory_profiler<br>
 
-## 2.a Run in command line
+### 2.a Run in command line
 Create a function and put this @profile decorator above then execute
 one of the these commands line.<br>
 `$ timer python file.py`<br>
 `$ python -m cProfile file.py`<br>
 `$ python -m memory_profiler file.py`<br>
 
-## 2.b Import in your code
+### 2.b Import in your code
 
-### For total time:
+#### For total time:
 `$ python file.py`<br>
 ```python
 from profilehooks import timecall
@@ -37,7 +39,7 @@ def functionName():
 functionName()
 ```
 
-### For time:
+#### For time:
 `$ python file.py`<br>
 ```python
 from profilehooks import profile
@@ -48,7 +50,7 @@ def functionName():
 functionName()
 ```
 
-### For memory:
+#### For memory:
 `$ python file.py`<br>
 ```python
 from memory_profiler import profile
@@ -59,7 +61,7 @@ def functionName():
 functionName()
 ```
 
-### For coverage:
+#### For coverage:
 `$ python file.py`<br>
 ```python
 from profilehooks import coverage
