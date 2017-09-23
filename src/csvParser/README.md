@@ -6,15 +6,15 @@ sudo pacman -S python-pip<br>
 sudo pacman -S python-psutil<br>
 
 ## 1.2 Install the python packages with pip
-sudo pip install memory_profiler<br>
 sudo pip install profilehooks<br>
+sudo pip install memory_profiler<br>
 
 ## 2.a Run in command line
 Create a function and put this @profile decorator above then execute
 one of the these commands line.<br>
+`timer python file.py`<br>
 `python -m cProfile file.py`<br>
 `python -m memory_profiler file.py`<br>
-`timer python file.py`<br>
 
 ## 2.b Import in your code
 
