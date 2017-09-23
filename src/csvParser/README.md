@@ -10,7 +10,8 @@ sudo pip install memory_profiler<br>
 sudo pip install profilehooks<br>
 
 ## 2.a Run in command line
-Create a function and put @profile above then execute the command line.<br>
+Create a function and put this @profile decorator above then execute
+one of the these commands line.<br>
 `python -m cProfile file.py`<br>
 `python -m memory_profiler file.py`<br>
 `timer python file.py`<br>
