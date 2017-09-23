@@ -50,3 +50,14 @@ def functionName():
 
 functionName()
 ```
+
+### For coverage:
+`$ python file.py`<br>
+```python
+from profilehooks import coverage
+@coverage
+def functionName():
+	#...
+
+functionName()
+```
