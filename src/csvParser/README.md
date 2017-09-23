@@ -64,11 +64,11 @@ functionName()
 
 ## Usages
 You're able to modified the test:
-`$ python splitParse.py`
-`$ python csvParse.py`
+`$ python splitParse.py`<br>
+`$ python csvParse.py`<br>
 
-then you're able to un-comment or comment the imports and decorators
-to run and compare the results.
+Also you're able to un-comment or comment the imports and decorators
+to run and compare the results.<br>
 
 ## My results
 
