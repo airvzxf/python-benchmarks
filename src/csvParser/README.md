@@ -2,22 +2,22 @@
 These are benchmarks test for CSV parser
 
 ## Usages
-You're able to modified or run the test:<br>
-`$ python splitParse.py`<br>
-`$ python csvParse.py`<br>
+run the main program:<br>
+`$ python __main__.py`<br>
 
-Also you're able to un-comment or comment the imports and decorators
-to run and compare the results.<br>
+You're able to modified the functions of:<br>
+`splitParse.py`<br>
+`csvParse.py`<br>
 
 ## Installation and setup
 
 ### 1.1 Install packages in Arch Linux
-sudo pacman -S python-pip<br>
-sudo pacman -S python-psutil<br>
+`$ sudo pacman -S python-pip`<br>
+`$ sudo pacman -S python-psutil`<br>
 
 ### 1.2 Install the python packages with pip
-sudo pip install profilehooks<br>
-sudo pip install memory_profiler<br>
+`$ sudo pip install profilehooks`<br>
+`$ sudo pip install memory_profiler`<br>
 
 ### 2.a Run in command line
 Create a function and put this @profile decorator above then execute
@@ -33,10 +33,10 @@ one of the these commands line.<br>
 ```python
 from profilehooks import timecall
 @timecall
-def functionName():
-	#...
-
-functionName()
+def function_name():
+    # something
+    pass
+function_name() # Execute the function
 ```
 
 #### For time:
@@ -44,10 +44,11 @@ functionName()
 ```python
 from profilehooks import profile
 @profile
-def functionName():
-	#...
+def function_name():
+	# something
+	pass
 
-functionName()
+function_name() # Execute the function
 ```
 
 #### For memory:
@@ -55,10 +56,11 @@ functionName()
 ```python
 from memory_profiler import profile
 @profile
-def functionName():
-	#...
+def function_name():
+    # something
+    pass
 
-functionName()
+function_name() # Execute the function
 ```
 
 #### For coverage:
@@ -66,10 +68,11 @@ functionName()
 ```python
 from profilehooks import coverage
 @coverage
-def functionName():
-	#...
+def function_name():
+    # something
+    pass
 
-functionName()
+function_name() # Execute the function
 ```
 
 ## My results
@@ -77,6 +80,25 @@ functionName()
 ### Sat Sep 23 01:41:46 EDT 2017
 __Winner:__ __csvParser__ with `import csv`<br>
 Time: csvParser was faster but not to much.<br>
-Memory: Both used the same.<br>
-CPU: Both useed the same resources.<br>
-GPU: Not used
+Memory: Almost the same memory use.<br>
+
+__Used travel.log with 50,000 records__<br>
+Speed: 22.63% faster<br>
+Memory: 15.1 MiB<br>
+
+|  CSV  | Split |    %   | Average |
+| ----: | -----:| ------:| -------:|
+| 0.058 | 0.072 | 19.44% |         |
+| 0.063 | 0.083 | 24.10% | 22.63%  |
+| 0.059 | 0.078 | 24.36% |         |
+
+
+__Used travel.log with 500,000 records__<br>
+Speed: 21.24% faster<br>
+Memory: 19.1 MiB<br>
+
+|  CSV  | Split |    %   | Average |
+| ----: | -----:| ------:| -------:|
+| 0.636 | 0.792 | 19.70% |         |
+| 0.604 | 0.807 | 25.15% | 21.24%  |
+| 0.611 | 0.753 | 18.86% |         |
