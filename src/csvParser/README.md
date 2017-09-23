@@ -32,47 +32,56 @@ one of the these commands line.<br>
 `$ python file.py`<br>
 ```python
 from profilehooks import timecall
+
 @timecall
 def function_name():
     # something
     pass
-function_name() # Execute the function
+
+# Execute the function
+function_name()
 ```
 
 #### For time:
 `$ python file.py`<br>
 ```python
 from profilehooks import profile
+
 @profile
 def function_name():
-	# something
-	pass
+    # something
+    pass
 
-function_name() # Execute the function
+# Execute the function
+function_name()
 ```
 
 #### For memory:
 `$ python file.py`<br>
 ```python
 from memory_profiler import profile
+
 @profile
 def function_name():
     # something
     pass
 
-function_name() # Execute the function
+# Execute the function
+function_name()
 ```
 
 #### For coverage:
 `$ python file.py`<br>
 ```python
 from profilehooks import coverage
+
 @coverage
 def function_name():
     # something
     pass
 
-function_name() # Execute the function
+# Execute the function
+function_name()
 ```
 
 ## My results
