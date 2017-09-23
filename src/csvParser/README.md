@@ -1,5 +1,5 @@
 # CSV Parse Benchmarks
-This benchmarks test the CSV parser
+These are benchmarks test for CSV parser
 
 ## 1.1 Install packages in Arch Linux
 sudo pacman -S python-pip<br>
