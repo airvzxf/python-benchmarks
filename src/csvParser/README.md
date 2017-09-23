@@ -62,6 +62,14 @@ def functionName():
 functionName()
 ```
 
+## Usages
+You're able to modified the test:
+`$ python splitParse.py`
+`$ python csvParse.py`
+
+then you're able to un-comment or comment the imports and decorators
+to run and compare the results.
+
 ## My results
 
 ### Sat Sep 23 01:41:46 EDT 2017
