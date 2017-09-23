@@ -16,7 +16,7 @@ one of the these commands line.<br>
 `python -m memory_profiler file.py`<br>
 `timer python file.py`<br>
 
-## 2.b import in your code
+## 2.b Import in your code
 
 ### For total time:
 ```python
