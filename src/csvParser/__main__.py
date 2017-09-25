@@ -1,5 +1,9 @@
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
 import memory_profiler
 import profilehooks
+
 from parser import csv_parser
 from parser import split_parser
 
