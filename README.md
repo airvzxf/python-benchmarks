@@ -3,4 +3,4 @@
 
 List of benchmarks:
 
-* [CSV Parse](src/csvParser/README.md)
+* [CSV Parse](src/csvParser/)
