@@ -7,8 +7,7 @@ The first is with the Python built-in module which is CSV and the other is with 
 Both ways are tested by two parameters, first the time to the script takes to finished the parser and the memory used.
 """
 
-from src.csvParser.travel.csv_parser import csv_parser
-from src.csvParser.travel.split_parser import split_parser
+import travel
 
 import memory_profiler
 import profilehooks
@@ -18,28 +17,28 @@ import profilehooks
 def csv_parser_time():
     """Run the benchmark for CSV Parser and it should recorded the total time."""
     print("\n\n\n- csv_parser_time()")
-    csv_parser()
+    travel.csv_parser()
 
 
 @memory_profiler.profile()
 def csv_parser_memory():
     """Run the benchmark for CSV Parser and it should recorded the total used memory."""
     print("\n\n\n- csv_parser_memory()")
-    csv_parser()
+    travel.csv_parser()
 
 
 @profilehooks.timecall()
 def split_parser_time():
     """Run the benchmark for Split and it should recorded the total used memory."""
     print("\n\n\n- split_parser_time()")
-    split_parser()
+    travel.split_parser()
 
 
 @memory_profiler.profile()
 def split_parser_memory():
     """Run the benchmark for Split and it should recorded the total used memory."""
     print("\n\n\n- split_parser_memory()")
-    split_parser()
+    travel.split_parser()
 
 
 if __name__ == '__main__':
