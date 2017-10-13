@@ -3,7 +3,7 @@
 """Parser CSV via split built-in function"""
 
 
-def travel_distance():
+def split_parser():
     """This function open the log file and split by commas, then it count the total distances traveled"""
     total_distance = 0
 

@@ -5,7 +5,7 @@
 import csv
 
 
-def travel_distance():
+def csv_parser():
     """This function open the log file and split by commas, then it count the total distances traveled"""
     total_distance = 0
 
