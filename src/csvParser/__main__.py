@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
-"""These are benchmarks test for CSV travel.
+"""These are benchmarks test for CSV Parser.
 
 This test compare two different ways for parse a CSV file.
 The first is with the Python built-in module which is CSV and the other is with split built-in function.
-Both ways are tested by two parameters, first the time to the script takes to finished the travel and the memory used.
+Both ways are tested by two parameters, first the time to the script takes to finished the parser and the memory used.
 """
 
-from parser import csv_parser
-from parser import split_parser
+from travel import csv_parser
+from travel import split_parser
 
 import memory_profiler
 import profilehooks
