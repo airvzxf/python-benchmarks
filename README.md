@@ -1,2 +1,6 @@
-# python-benchmarks
-Benchmarks for Python
+# Python Benchmarks
+---
+
+List of benchmarks:
+
+* [CSV Parse](src/csvParser/README.md)
