@@ -1,5 +1,4 @@
 # Python Benchmarks
----
 
 List of benchmarks:
 
