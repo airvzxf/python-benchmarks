@@ -27,6 +27,10 @@ def main() -> None:
     memoization_time(position)
     tabulation_time(position)
 
+    recursively_profile(position)
+    memoization_profile(position)
+    tabulation_profile(position)
+
     print("\n\n\n### Tests the maximum performance for recursion with memoization.")
     position = 900
 
@@ -36,17 +40,32 @@ def main() -> None:
     memoization_time(position)
     tabulation_time(position)
 
+    memoization_profile(position)
+    tabulation_profile(position)
+
     print("\n\n\n### Tests the maximum performance for dynamic programming.")
     position = 500000
 
     tabulation_memory(position)
     tabulation_time(position)
+    tabulation_profile(position)
 
 
 @profilehooks.timecall()
 def recursively_time(n: int) -> None:
     """
     Run the benchmark for Fibonacci using recursion, it should recorded the total time.
+
+    :param n: Position that we are looking in the Fibonacci sequence.
+    :rtype: None
+    """
+    recursion.recursively(n)
+
+
+@profilehooks.profile()
+def recursively_profile(n: int) -> None:
+    """
+    Run the benchmark for Fibonacci using recursion, it should recorded the profile.
 
     :param n: Position that we are looking in the Fibonacci sequence.
     :rtype: None
@@ -76,6 +95,17 @@ def memoization_time(n: int) -> None:
     recursion.memoization(n)
 
 
+@profilehooks.profile()
+def memoization_profile(n: int) -> None:
+    """
+    Run the benchmark for Fibonacci using memoization, it should recorded the profile.
+
+    :param n: Position that we are looking in the Fibonacci sequence.
+    :rtype: None
+    """
+    recursion.memoization(n)
+
+
 @memory_profiler.profile()
 def memoization_memory(n: int) -> None:
     """
@@ -91,6 +121,17 @@ def memoization_memory(n: int) -> None:
 def tabulation_time(n: int) -> None:
     """
     Run the benchmark for Fibonacci using tabulation, it should recorded the total time.
+
+    :param n: Position that we are looking in the Fibonacci sequence.
+    :rtype: None
+    """
+    dynamic_programming.tabulation(n)
+
+
+@profilehooks.profile()
+def tabulation_profile(n: int) -> None:
+    """
+    Run the benchmark for Fibonacci using tabulation, it should recorded the profile.
 
     :param n: Position that we are looking in the Fibonacci sequence.
     :rtype: None
