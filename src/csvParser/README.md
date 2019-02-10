@@ -1,113 +1,75 @@
 # CSV Parse Benchmarks
-These are benchmarks test for CSV parser
+
+These are benchmarks tests for CSV parser
 
 ## Usages
-run the main program:<br>
-`$ python __main__.py`<br>
 
-You're able to modified the functions of:<br>
-`splitParse.py`<br>
-`csvParse.py`<br>
-
-## Installation and setup
-
-### 1.1 Install packages in Arch Linux
-`$ sudo pacman -S python-pip`<br>
-`$ sudo pacman -S python-psutil`<br>
-
-### 1.2 Install the python packages with pip
-`$ sudo pip install profilehooks`<br>
-`$ sudo pip install memory_profiler`<br>
-
-### 2.a Run in command line
-Create a function and put this @profile decorator above then execute
-one of the these commands line.<br>
-`$ timer python file.py`<br>
-`$ python -m cProfile file.py`<br>
-`$ python -m memory_profiler file.py`<br>
-
-### 2.b Import in your code
-
-#### For total time:
-`$ python file.py`<br>
-```python
-from profilehooks import timecall
-
-@timecall
-def function_name():
-    # something
-    pass
-
-# Execute the function
-function_name()
+Run the main program:<br>
+* `PYTHONPATH`: The root path is this project.
+* The second line execute the virtual environment python which contains all the libraries.
+* The last line run the main script.
+```bash
+PYTHONPATH=./../../ \
+./../../venv/bin/python \
+./__main__.py
 ```
 
-#### For time:
-`$ python file.py`<br>
-```python
-from profilehooks import profile
-
-@profile
-def function_name():
-    # something
-    pass
-
-# Execute the function
-function_name()
-```
-
-#### For memory:
-`$ python file.py`<br>
-```python
-from memory_profiler import profile
-
-@profile
-def function_name():
-    # something
-    pass
-
-# Execute the function
-function_name()
-```
-
-#### For coverage:
-`$ python file.py`<br>
-```python
-from profilehooks import coverage
-
-@coverage
-def function_name():
-    # something
-    pass
-
-# Execute the function
-function_name()
-```
 
 ## My results
+Sat Sep 23 01:41:46 EDT 2017<br>
 
-### Sat Sep 23 01:41:46 EDT 2017
 __Winner:__ __csvParser__ with `import csv`<br>
 Time: csvParser was faster but not to much.<br>
 Memory: Almost the same memory use.<br>
 
-__Used travel.log with 50,000 records__<br>
-Speed: 22.63% faster<br>
-Memory: 15.1 MiB<br>
 
-|  CSV  | Split |    %   | Average |
-| ----: | -----:| ------:| -------:|
-| 0.058 | 0.072 | 19.44% |         |
-| 0.063 | 0.083 | 24.10% | 22.63%  |
-| 0.059 | 0.078 | 24.36% |         |
+### Using csv.log with 120,000 records.
+
+1st Run
+
+| Strategy | Time (s) | Memory (MiB) |
+| -------: | -------: | -----------: |
+| CSV      |    0.068 |          0.7 |
+| Split    |    0.071 |          0.7 |
 
 
-__Used travel.log with 500,000 records__<br>
-Speed: 21.24% faster<br>
-Memory: 19.1 MiB<br>
+2nd Run
 
-|  CSV  | Split |    %   | Average |
-| ----: | -----:| ------:| -------:|
-| 0.636 | 0.792 | 19.70% |         |
-| 0.604 | 0.807 | 25.15% | 21.24%  |
-| 0.611 | 0.753 | 18.86% |         |
+| Strategy | Time (s) | Memory (MiB) |
+| -------: | -------: | -----------: |
+| CSV      |    0.071 |          0.7 |
+| Split    |    0.070 |          0.7 |
+
+
+3th Run
+
+| Strategy | Time (s) | Memory (MiB) |
+| -------: | -------: | -----------: |
+| CSV      |    0.067 |          0.7 |
+| Split    |    0.070 |          0.7 |
+
+
+### Using csv.log with 2,400,000 records.
+
+1st Run
+
+| Strategy | Time (s) | Memory (MiB) |
+| -------: | -------: | -----------: |
+| CSV      |    1.325 |         18.2 |
+| Split    |    1.406 |         18.2 |
+
+
+2nd Run
+
+| Strategy | Time (s) | Memory (MiB) |
+| -------: | -------: | -----------: |
+| CSV      |    1.394 |         18.2 |
+| Split    |    1.433 |         18.2 |
+
+
+3th Run
+
+| Strategy | Time (s) | Memory (MiB) |
+| -------: | -------: | -----------: |
+| CSV      |    1.369 |         18.2 |
+| Split    |    1.449 |         18.2 |

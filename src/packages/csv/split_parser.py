@@ -10,7 +10,7 @@ def split_parser():
     total_distance = 0
     dir_path = os.path.dirname(os.path.realpath(__file__))
 
-    file_id = open(dir_path + "/travel.log")
+    file_id = open(dir_path + "/records.csv")
     content = file_id.readlines()
     file_id.close()
 
